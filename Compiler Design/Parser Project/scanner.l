@@ -1,13 +1,13 @@
 %{ 
     #include "y.tab.h"
-    extern int yylval;
+    //extern int yylval;
 %} 
 
 %%
 \"(\\.|[^"\\])*\"      {printf("%s string\n",yytext);return STRING;}
 [0-9]+\.?[0-9]*  { 
-            yylval = atoi(yytext); 
-            printf("%s number\n",yytext);
+            //yylval = atoi(yytext); 
+            printf("%d number\n",atoi(yytext));
             return NUMBER;
         }
 "true"|"false"   {printf("%s boolean\n",yytext);return BOOL;}

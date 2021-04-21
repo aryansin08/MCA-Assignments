@@ -1,7 +1,7 @@
 %{ 
     #include <stdio.h>
     #include "lex.yy.c"
-    int yylex();
+    //int yylex();
     int yyerror();
 %} 
 
